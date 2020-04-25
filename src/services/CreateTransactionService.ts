@@ -43,7 +43,7 @@ class CreateTransactionService {
       title,
       value,
       type,
-      category_id: checkCategoryExists.id,
+      category: checkCategoryExists,
     });
     await transactionRepository.save(transaction);
     return transaction;
